@@ -1,3 +1,46 @@
+# 🛒 React E-Commerce App
+
+A simple e-commerce application built using **React.js** for learning purposes. It showcases product listings, cart functionality, checkout, and basic user authentication forms.
+
+---
+
+## 🚀 Features
+
+- 🔗 Navigation: Home, About Us, Products, Cart, Checkout, Login/Register
+- 🛍️ Product Listing: Displays latest products from API
+- ➕➖ Add/Remove Products: Add to cart, increase/decrease quantity
+- 🧮 Cart Summary: Quantity and total price per item
+- ✅ Checkout: Displays selected product details
+- 🔐 Login/Register forms with validation
+
+---
+
+## 📸 Demo
+
+> *(Optional: Add screenshot or link to live version if deployed)*
+
+---
+
+## 📦 Tech Stack
+
+- [React.js](https://reactjs.org/)
+- [React Router](https://reactrouter.com/)
+- [Context API](https://reactjs.org/docs/context.html)
+- [Axios](https://axios-http.com/)
+- [React Hook Form](https://react-hook-form.com/) – for forms & validation
+- [FakeStore API](https://fakestoreapi.com/) – for product data
+
+---
+
+## 🔧 Getting Started
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/<your-username>/ecommerce-react-app.git
+cd ecommerce-react-app
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
