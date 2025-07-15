@@ -1,6 +1,6 @@
 import { useForm } from 'react-hook-form';
 
-function LoginRegister() {
+export default function LoginRegister() {
   const { register, handleSubmit, formState: { errors } } = useForm();
 
   const onSubmit = (data) => {
@@ -17,5 +17,7 @@ function LoginRegister() {
 
       <button type="submit">Login / Register</button>
     </form>
+
+
   );
 }

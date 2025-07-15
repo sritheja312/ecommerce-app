@@ -1,7 +1,7 @@
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
 
-function Checkout() {
+export default function Checkout() {
   const { cartItems } = useContext(CartContext);
   const total = cartItems.reduce((sum, item) => sum + item.price, 0);
 

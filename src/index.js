@@ -1,11 +1,15 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client'; // ✅ For React 18+
-import App from './App';                 // ✅ Import the App component
-import './index.css';                    // Optional: Your CSS
+import ReactDOM from 'react-dom/client';
+import App from './App';
+import './index.css';
+import { CartProvider } from './context/CartContext'; // ✅ Correct name
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
   <React.StrictMode>
-    <App />
+    <CartProvider>
+      <App />
+    </CartProvider>
   </React.StrictMode>
 );
