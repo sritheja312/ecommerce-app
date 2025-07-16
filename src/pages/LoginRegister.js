@@ -1,23 +1,35 @@
-import { useForm } from 'react-hook-form';
+import React, { useState, useContext } from 'react';
+import { AuthContext } from '../context/AuthContext';
 
 export default function LoginRegister() {
-  const { register, handleSubmit, formState: { errors } } = useForm();
+  const { user, login, logout } = useContext(AuthContext);
+  const [email, setEmail] = useState('');
 
-  const onSubmit = (data) => {
-    console.log('Form Submitted:', data);
+  const handleLogin = (e) => {
+    e.preventDefault();
+    if (email) {
+      login({ email }); // You can add more data
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <input {...register('email', { required: 'Email required' })} placeholder="Email" />
-      <p>{errors.email?.message}</p>
+    <div>
+      <h2>{user ? `Welcome, ${user.email}` : 'Login'}</h2>
 
-      <input type="password" {...register('password', { required: 'Password required' })} placeholder="Password" />
-      <p>{errors.password?.message}</p>
-
-      <button type="submit">Login / Register</button>
-    </form>
-
-
+      {user ? (
+        <button onClick={logout}>Logout</button>
+      ) : (
+        <form onSubmit={handleLogin}>
+          <input
+            type="email"
+            placeholder="Enter email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <button type="submit">Login</button>
+        </form>
+      )}
+    </div>
   );
 }
