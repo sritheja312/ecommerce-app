@@ -5,6 +5,7 @@ import './index.css';
 import { CartProvider } from './context/CartContext'; // ✅ Correct name
 import { AuthProvider } from './context/AuthContext';
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 root.render(
