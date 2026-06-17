@@ -21,7 +21,7 @@ export default function Cart() {
                 marginBottom: '16px',
                 padding: '12px',
                 border: '1px solid #ccc',
-                borderRadius: '6px',
+                borderRadius: '5px',
               }}
             >
               <strong>{item.title}</strong>
