@@ -8,7 +8,7 @@ export default function Navbar(){
     const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
 
     return (
-        <nav>
+        <nav className='mainmenu' style={{ display: 'flex', justifyContent: 'space-around', padding: '10px', backgroundColor: '#f0f0f0' }}>
             <Link to="/"> Home </Link>
             <Link to="/about"> AboutUs </Link>
             <Link to="/products"> Products </Link>
