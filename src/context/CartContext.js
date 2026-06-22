@@ -29,7 +29,7 @@ export const CartProvider = ({ children }) => {
     }
   };
 
-  // ➖ Decrease quantity or remove item
+  // Decrease quantity or remove item
   const removeFromCart = (productId) => {
     const existing = cartItems.find(item => item.id === productId);
 

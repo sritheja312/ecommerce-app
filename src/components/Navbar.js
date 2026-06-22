@@ -12,9 +12,9 @@ export default function Navbar(){
             <Link to="/"> Home </Link>
             <Link to="/about"> AboutUs </Link>
             <Link to="/products"> Products </Link>
-            <Link to="/cart"> Cart({totalQuantity}) </Link>
             <Link to="/checkout"> Checkout </Link>
             <Link to="/login"> Login/ Register </Link>
+            <Link to="/cart"> Cart({totalQuantity}) </Link>
         </nav>
     );
 }
