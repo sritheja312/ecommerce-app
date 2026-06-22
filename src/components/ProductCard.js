@@ -10,7 +10,7 @@ export default function ProductCard({ product }) {
   const quantity = itemInCart ? itemInCart.quantity : 0;
 
   return (
-    <div>
+    <div className='container' style={{ border: '1px solid #ccc', padding: '16px', marginBottom: '16px' }}>
       <h4>{product.title}</h4>
       <p>${product.price}</p>
 
