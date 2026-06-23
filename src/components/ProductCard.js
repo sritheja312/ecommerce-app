@@ -10,19 +10,23 @@ export default function ProductCard({ product }) {
   const quantity = itemInCart ? itemInCart.quantity : 0;
 
   return (
-    <div className='container' style={{ border: '1px solid #ccc', padding: '16px', marginBottom: '16px' }}>
-      <h4>{product.title}</h4>
-      <p>${product.price}</p>
+    <>
+    
+      <div className='flex' style={{ border: '1px solid #ccc', padding: '16px', marginBottom: '16px' }}>
+        <h4>{product.title}</h4>
+        <p>${product.price}</p>
 
-      {quantity > 0 ? (
-        <div>
-          <button onClick={() => removeFromCart(product.id)}>-</button>
-          <span style={{ margin: '0 10px' }}>{quantity}</span>
-          <button onClick={() => addToCart(product)}>+</button>
-        </div>
-      ) : (
-        <button onClick={() => addToCart(product)}>Add to Cart</button>
-      )}
-    </div>
+        {quantity > 0 ? (
+          <div>
+            <button onClick={() => removeFromCart(product.id)}>-</button>
+            <span style={{ margin: '0 10px' }}>{quantity}</span>
+            <button onClick={() => addToCart(product)}>+</button>
+          </div>
+        ) : (
+          <button onClick={() => addToCart(product)}>Add to Cart</button>
+        )}
+      </div>
+
+    </>
   );
 }

@@ -10,12 +10,14 @@ export default function Products() {
       }, []);
 
   return (
-    <div>
-      <h2>Latest Products</h2>
-      {products.map(product => (
-        <ProductCard key={product.id} product={product} />
-      ))}
-    </div>
+    <>
+      <div className='container'>
+        <h2>Latest Products</h2>
+        {products.map(product => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+    </>
   )
 
 }
