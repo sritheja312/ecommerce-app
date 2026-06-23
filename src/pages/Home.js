@@ -12,9 +12,12 @@ export default function Home() {
   return (
     <div>
       <h2>Latest Products</h2>
-      {products.slice(0, 5).map(product => (
-        <ProductCard key={product.id} product={product} />
-      ))}
+      <div className='flex'>
+        {products.slice(0, 5).map(product => (
+          <ProductCard key={product.id} product={product} />
+        ))}
+      </div>
+
     </div>
   );
 }
