@@ -11,8 +11,8 @@ export default function Home() {
 
   return (
     <div>
-      <h2>Latest Products</h2>
-      <div className='flex'>
+      <h2 className='text-4xl font-bold mb-6 mt-6 text-center'>Latest Products</h2>
+      <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4'>
         {products.slice(0, 5).map(product => (
           <ProductCard key={product.id} product={product} />
         ))}

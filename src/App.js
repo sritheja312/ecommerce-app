@@ -10,7 +10,8 @@ import LoginRegister from './pages/LoginRegister';
 
 function App() {
   return (
-    <Router>
+    <>
+      <Router>
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -21,6 +22,8 @@ function App() {
         <Route path="/login" element={<LoginRegister />} />
       </Routes>
     </Router>
+    </>
+    
   );
 }
 export default App;
