@@ -12,7 +12,7 @@ export default function ProductCard({ product }) {
   return (
     <>
     
-      <div className='flex' style={{ border: '1px solid #ccc', padding: '16px', marginBottom: '16px' }}>
+      <div className='flex flex-col items-left justify-center border p-4 rounded-lg shadow-md'>
         <h4>{product.title}</h4>
         <p>${product.price}</p>
 
@@ -26,7 +26,7 @@ export default function ProductCard({ product }) {
           <button onClick={() => addToCart(product)}>Add to Cart</button>
         )}
       </div>
-
+    
     </>
   );
 }
